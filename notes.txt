@@ -1,0 +1,13 @@
+            // level 2 with loob
+            
+            // draw(matrix,gameBoard);
+
+            //level3
+            // div.classList.remove(gridElement.target.classList[0]);
+            // div.classList.add('sky');
+
+            // adding delted element to stack
+
+            // let temp=Object.keys(state);
+            // console.log(temp[matrix[x][y]]);
+            // state.inventory[temp[matrix[x][y]]]++;

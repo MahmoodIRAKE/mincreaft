@@ -1,11 +1,17 @@
 export const state = {
-    ground_limit: 14,
     sky: 0,
     cloud: 1,
     ground: 2,
     grass: 3,
     stone: 4,
     wood: 5,
+    ground_limit: 14,
+    inventory:{
+        ground: 0,
+        grass:0,
+        stone: 0,
+        wood: 0,
+    },
 };
 export const matrix = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
