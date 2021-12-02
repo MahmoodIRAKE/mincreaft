@@ -27,15 +27,19 @@
 }
 
 .ground {
-    background: url('./assets/images/ground.png') no-repeat center center/cover;
+    background: url('../assets/images/ground.png') no-repeat center center/cover;
 }
 
 .grass {
-    background-color: chartreuse;
+    background: url('../assets/images/tree.png') no-repeat center center/cover;
+}
+
+.ground-grass {
+    background: url('../assets/images/ground-grass.png') no-repeat center center/cover;
 }
 
 .stone {
-    background-color: grey;
+    background: url('../assets/images/stone.png') no-repeat center center/cover;
 }
 
 .cloud {
@@ -43,5 +47,5 @@
 }
 
 .wood {
-    background-color: rgb(231, 182, 182));
+    background: url('../assets/images/wood.png') no-repeat center center/cover;
 }
