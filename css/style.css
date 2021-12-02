@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    background-color: rgb(65, 63, 61);
+}
+
+.game-board {
+    display: grid;
+    background-color: rgb(77, 127, 192);
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    border: 1px solid black;
+    width: 85vmax;
+    background-color: aqua;
+}
+
+.game-side-bar {
+    width: 15vmin;
+}
+
+.ground {
+    background: url('./assets/images/ground.png') no-repeat center center/cover;
+}
+
+.grass {
+    background-color: chartreuse;
+}
+
+.stone {
+    background-color: grey;
+}
+
+.cloud {
+    background-color: #fff;
+}
+
+.wood {
+    background-color: rgb(231, 182, 182));
+}
