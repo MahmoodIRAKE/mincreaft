@@ -35,6 +35,7 @@ export function draw(matrix,gameBoard) {
 }
 /// another ways 2 
 export function drawInventoryStack(state,inventoryStack) {
+    console.log(state)
       inventoryStack.innerHTML='';
       Object.keys(state.inventory).forEach(key=>{
           if(state.inventory[key]>0){
@@ -43,4 +44,41 @@ export function drawInventoryStack(state,inventoryStack) {
            inventoryStack.innerHTML += str; 
           }
       })
+}
+
+export function drawElemnetBack(state,gameBoard,inventoryStack,matrix){
+   chosenElement(state,inventoryStack);
+   gameBoard.addEventListener('click',(gridElement)=>{
+       
+    if(state.chosenElementFromInventory !== '' && state.inventory[state.chosenElementFromInventory]>0 ){
+        let idStr=gridElement.target.id;
+        let blockPoint=idStr.split(" ");
+        blockPoint=blockPoint.map(item=>+item)// casting the numbers from char to int
+        let x=blockPoint[0];
+        let y=blockPoint[1];
+        if(matrix[x][y]===state.sky){
+            matrix[x][y]=state[state.chosenElementFromInventory];
+            Object.keys(state).forEach(key=>{
+               if( state[key]===matrix[x][y]){
+                   state.inventory[key]--;
+               }
+            });
+            
+             let addableDiv=document.getElementById(idStr);
+            addableDiv.classList.remove('sky');
+            addableDiv.classList.add(state.chosenElementFromInventory);
+
+           // draw(matrix,gameBoard);
+            drawInventoryStack(state,inventoryStack);
+            
+        }
+    }
+   });
+}
+
+function chosenElement(state,inventoryStack){
+    inventoryStack.addEventListener('click',(item)=>{
+        state.chosenElementFromInventory=item.target.classList[0];
+        state.chosenTool=''
+    });
 }

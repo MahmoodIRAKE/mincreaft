@@ -6,12 +6,19 @@ export const state = {
     stone: 4,
     wood: 5,
     ground_limit: 14,
+    chosenElementFromInventory:'',
+    chosenTool:'',
     inventory:{
         ground: 0,
         grass:0,
         stone: 0,
         wood: 0,
     },
+    tools:{
+        axe:['wood','grass'],
+        pickAxe:['stone'],
+        shovel:['ground'],
+    }
 };
 export const matrix = [
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
