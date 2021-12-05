@@ -7,28 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/utilties.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 
     <title>Document</title>
 </head>
 
 <body>
+    <div class="start-page flexing-center">
+        <div class="logo"></div>
+        <h1>SURVIVAL ZOMBIES</h1>
+        <a href="#choosingTheme" class="button1">Start</a>
+        <a href="" class="button1" id="load">Load Save</a>
+   </div>
+   <div class="flexing-center1 choosing-theme" id="choosingTheme">
+    <h1 class="">Choose THEME</h1>
+    <a href="#game" class="button1"> <div class="theme1" id="1"></div></a>
+    <a href="#game" class="button1"></a><div class="theme2" id="2"></div></a>
+    <a href="#game" class="button1"> <div class="theme3" id="3"></div></a>
+</div>
     
-    <div class="container">
+    <div class="container diplying" id="game" >
+        <div class="save">SAVE</div>
+        <div class="timer"></div>
+        <div class="game-over">GAME OVER</div>
+        <div class="hearts"></div>
         <div class="game-board">
-
+           
         </div>
         <div class="game-side-bar">
             <div class="tools flexing-center">
+                
                <div class="axe sizing-box"></div>
                <div class="pickAxe sizing-box"></div>
                <div class="shovel sizing-box"></div>
+               <div class="sword sizing-box"></div>
             </div>
+            
             <div class="stack flexing-center">
 
             </div>
         </div>
     </div>
 
+
+  
     <script src="./js/main.js" defer type="module"></script>
 </body>
 

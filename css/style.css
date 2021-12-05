@@ -10,6 +10,17 @@
     height: 100vh;
     max-width: 100%;
     background-color: rgb(65, 63, 61);
+    
+    
+}
+.choosing-theme{
+    background: url('../assets/images/minecraft-the-wild.jpg')  center center/cover;
+    width: 100vw;
+    height: 100vh;
+    display: none; 
+    font-size: 24px;
+    font-family: 'Creepster', cursive;
+    color:red;
 }
 
 .game-board {
@@ -19,11 +30,15 @@
     grid-template-rows: repeat(20, 1fr);
     border: 1px solid black;
     width: 85vmax;
-    background-color: aqua;
+    background-color:rgb(22, 32, 32);
+    cursor:grab;
 }
 
+
+
 .game-side-bar {
-    width: 15vmin;   
+    width: 15vmin;
+    cursor:grab;   
 }
 .tools{
     border: 1px solid black;
@@ -39,18 +54,45 @@
 .ground {
     background: url('../assets/images/ground.png') no-repeat center center/cover;
 }
+.ground1 {
+    background: url('../assets/images/ground2.png') no-repeat center center/cover;
+}
+.ground2 {
+    background: url('../assets/images/ground3.png') no-repeat center center/cover;
+}
 
 
 .grass {
-    background: url('../assets/images/tree.png') no-repeat center center/cover;
+    background: url('../assets/images/grass.png') no-repeat center center/cover;
+}
+.grass1 {
+    background: url('../assets/images/grass2.png') no-repeat center center/cover;
+}
+.grass2 {
+    background: url('../assets/images/grass3.png') no-repeat center center/cover;
 }
 
-.ground-grass {
-    background: url('../assets/images/ground-grass.png') no-repeat center center/cover;
+.groundGrass {
+    background: url('../assets/images/groundGrass.png') no-repeat center center/cover;
+}
+.groundGrass1 {
+    background: url('../assets/images/groundGrass2.png') no-repeat center center/cover;
+}
+.groundGrass2 {
+    background: url('../assets/images/groundGrass3.png') no-repeat center center/cover;
 }
 
 .stone {
+  
     background: url('../assets/images/stone.png') no-repeat center center/cover;
+}
+.stone1 {
+  
+    background: url('../assets/images/stone2.png') no-repeat center center/cover;
+}
+.stone2 {
+  
+    background: url('../assets/images/stone3.png') no-repeat center center/cover;
 }
 
 .cloud {
@@ -59,6 +101,12 @@
 
 .wood {
     background: url('../assets/images/wood.png') no-repeat center center/cover;
+}
+.wood1 {
+    background: url('../assets/images/wood2.png') no-repeat center center/cover;
+}
+.wood2 {
+    background: url('../assets/images/wood3.png') no-repeat center center/cover;
 }
 
 
@@ -71,6 +119,155 @@
 .shovel{
     background: url('../assets/images/shovel.png') no-repeat center center/cover;
 }
+.sword{
+    background: url('../assets/images/sword.png') no-repeat center center/cover;
+}
+.character{
+  
+    background: url('../assets/images/character.png') no-repeat center center/cover;
+}
+.zombie{
+    background: url('../assets/images/zombie.gif')  center center/cover;
+}
+.zombie1{
+    background: url('../assets/images/zombie.gif')  center center/cover;
+    transform: scale(-1);
+}
+.zombieBurn{
+    background: url('../assets/images/fire.gif')  center center/cover;
+}
+.bats{
+    background: url('../assets/images/bats.gif')  center center/cover;
+}
+.drop{
+    background: url('../assets/images/drop.png')  center center/cover;
+    width:15px;
+    height: 15px;
+}
 .sky{
     background: transparent ;
 }
+.hearts{
+    position: fixed;
+    
+    width: 50vw;
+    height: 5vmax;
+    z-index: 10;
+    display: flex;
+
+}
+.heartsImg{
+    background: url('../assets/images/heart.png')  center center/cover;
+    width:10%;
+    margin-left:1px;
+}
+
+.game-over{
+    position: fixed;
+   
+    width: 100vw;
+    height: 50vmax;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10vw;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    display: none;
+
+}
+.save{
+    position: fixed; 
+    width: 5vw;
+    height: 5vw;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5vw;
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    right:0 ;
+    bottom: 0;
+}
+.timer{
+    position: fixed;
+    
+    width: 50vw;
+    height: 5vmax;
+    z-index: 10;
+    display: flex;
+    left: 50vw;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Creepster', cursive;
+}
+
+
+
+.theme1{
+  width:25vw;
+  height: 25vh;
+  background:url('../assets/images/theme1.PNG')  center center/cover;
+  margin-bottom: 3rem;
+  box-shadow: 5px 5px #333;
+  border: rgb(219, 108, 108) 3px solid;
+}
+.theme2{
+    width:25vw;
+    height: 25vh;
+    background:url('../assets/images/theme2.PNG')  center center/cover;
+    margin-bottom: 3rem;
+    box-shadow: 5px 5px #333;
+    border: rgb(219, 108, 108) 3px solid;
+}
+.theme3{
+    width:25vw;
+    height: 25vh;
+    background:url('../assets/images/theme3.PNG')  center center/cover;
+    margin-bottom: 3rem;
+    box-shadow: 5px 5px #333;
+    border: rgb(219, 108, 108) 3px solid;
+}
+.start-page{
+    font-family: 'Creepster', cursive;
+    background:url('../assets/images/staetback.jpg')  center center/cover;
+    width: 100vw;
+    height: 100vh;
+    color:red;
+    font-size: 50px;
+    display: none;
+}
+.logo{
+    width:40vw;
+    height: 40vh;
+    background:url('../assets/images/Minecraft-Logo.png')  center center/cover;
+}
+a.button1{
+     display:inline-block;
+     padding:0.35em 1.2em;
+     border:0.1em solid #FFFFFF;
+     margin:0 0.3em 0.3em 0;
+     border-radius:0.12em;
+     box-sizing: border-box;
+     text-decoration:none;
+     font-family:'Roboto',sans-serif;
+     font-weight:300;
+     color:#FFFFFF;
+     text-align:center;
+     transition: all 0.2s;
+    }
+    a.button1:hover{
+     color:#000000;
+     background-color:#FFFFFF;
+    }
+    /* @media all and (max-width:30em){
+     a.button1{
+      display:block;
+      margin:0.4em auto;
+     }
+    }
+} */
+    
