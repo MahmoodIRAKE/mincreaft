@@ -3,18 +3,18 @@ import { getCharacter } from "./character.js";
 
 
 // this is the main engine for the zombie that runs everything in the game 
-export function zombieEngine(matrix,state,gameBoard){
-    zombieDirection(matrix,state,gameBoard)
-    showZombie(matrix,state,gameBoard)
+export function zombieEngine(matrix,state){
+    zombieDirection(matrix,state)
+    showZombie(matrix,state)
     zombieFellToGround(matrix,state)
-    moveZombie(matrix,state,gameBoard)
-    burnZombie(matrix,state,gameBoard)
-    destroyElemente(matrix,state,gameBoard)
+    moveZombie(matrix,state)
+    burnZombie(matrix,state)
+    destroyElemente(matrix,state)
 }
 
 
 // function that tells to show zombies at night
-     export function showZombie(matrix,state,gameBoard){
+     export function showZombie(matrix,state){
          
          if(state.toAttack){
             
@@ -31,7 +31,7 @@ export function zombieEngine(matrix,state,gameBoard){
     } 
 
  //function that tell the zombie to attack character
-export function moveZombie(matrix,state,gameBoard){
+export function moveZombie(matrix,state){
     let characterPosotion=getCharacter(matrix,state);
     let zombieArr=getZombie(matrix,state);
     if(state.toAttack){
@@ -57,6 +57,8 @@ export function drawZombieLeft(matrix,state,characterPosotion,zombiePosotion,elm
         
      }
 }
+
+
 // function that draws the zombie in the next right side 
 export function drawZombieRight(matrix,state,characterPosotion,zombiePosotion,elmentPosotion){
     let elementWay=isElementinTheWay(matrix,state,characterPosotion,zombiePosotion,elmentPosotion);
@@ -70,7 +72,7 @@ export function drawZombieRight(matrix,state,characterPosotion,zombiePosotion,el
      } 
 }
 // this function turn the zombie to the direction of the character
-  export function zombieDirection(matrix,state,gameBoard){
+  export function zombieDirection(matrix,state){
     let characterPosotion=getCharacter(matrix,state);
     let zombieArr=getZombie(matrix,state);
     for (let i =0; i < zombieArr.length; i++) {
@@ -86,7 +88,7 @@ export function drawZombieRight(matrix,state,characterPosotion,zombiePosotion,el
 
 
 // function that burns the zombies
-export function burnZombie(matrix,state,gameBoard){
+export function burnZombie(matrix,state){
     let zombieArr=getZombie(matrix,state);
     if(!state.toAttack){
         for (let i =0; i < zombieArr.length; i++) {
@@ -104,7 +106,7 @@ export function burnZombie(matrix,state,gameBoard){
 
 // function that tells the zombie to destroy elements
 
-export function destroyElemente(matrix,state,gameBoard){
+export function destroyElemente(matrix,state){
     let characterPosotion=getCharacter(matrix,state);
     let zombieArr=getZombie(matrix,state);
     

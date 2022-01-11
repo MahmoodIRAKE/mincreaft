@@ -1,6 +1,6 @@
 import {matrix,state,dayToNight} from "./constants.js";
 //Math.random()<0.5?0:1)
-
+// TO DO 
 function randomMatrix(){
     
     for(let i=0;i<state.gameGrid;i++){

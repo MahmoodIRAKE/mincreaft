@@ -18,6 +18,9 @@ const chosingelemnt=document.querySelector('.choosing-theme');
 const mainPage=document.querySelector('.button1');
 const gamePage=document.querySelector('.container');
 let lastRenderTime = 0;
+
+
+
 chosingelemnt.addEventListener('click',(gridElement)=>{
         
    let i= parseInt(gridElement.target.id)-1;
@@ -47,7 +50,7 @@ function main(currentTime) {
     lastRenderTime = currentTime;
     timer(timerText,state[i])
     nightAndDay(state[i],gameBoard,dayToNight)
-    zombieEngine(matrix,state[i],gameBoard)
+    zombieEngine(matrix,state[i])
     bastEngine(matrix,state[i],gameBoard)
     characterEngine(matrix,state[i],heartStack)
     }

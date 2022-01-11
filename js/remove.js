@@ -14,6 +14,7 @@ export function removeFromGameBoard(matrix,gameBoard,state,inventoryStack){
         let elementClass=getClass(gridElement)
         let id =getId(gridElement);
         let lastElementID=id[0]+' '+id[1];
+        
     if(state.isCharacter){
         
             if(checkPlaceForCharacter(state,matrix,id)){
